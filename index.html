@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membuat Template Website Bootstrap</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    
+    <!-- Bagian Header -->
+    <div class="row">
+      <div class="col-md-12 header" id="site-header">
+        <header>
+          <h1 class="title-site">Belajar Bootstrap</h1>
+          <p class="description">Belajar Membuat Template Website Dengan Bootstrap</p>
+        </header>
+      </div>
+    </div>
+
+    <!-- Menu Navigasi -->
+    <nav class="menus">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Portfolio</a></li>
+      </ul>
+    </nav>
+
+    <!-- Bagian Konten -->
+    <div class="row">
+      
+      <!-- Konten Utama -->
+      <div class="col-md-8 articles" id="site-content">
+        <article class="posts">
+          <h2 class="title-post">Data Mahasiswa</h2>
+          <!-- Tombol Tambah Data -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+            Tambah Data
+          </button>
+          <br><br>
+
+          <!-- Tabel Data -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nama Belakang</th>
+                <th>Email</th>
+                <th>Jurusan</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Andi Purnomo</td>
+                <td>andy@umm.ac.id</td>
+                <td>Teknik Informatika</td>
+                <td>
+                  <button type="button" class="btn btn-info">Edit</button>
+                  <button type="button" class="btn btn-success">Detail</button>
+                  <button type="button" class="btn btn-danger">Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Bagus Wardana</td>
+                <td>bagus@umm.ac.id</td>
+                <td>Teknik Informatika</td>
+                <td>
+                  <button type="button" class="btn btn-info">Edit</button>
+                  <button type="button" class="btn btn-success">Detail</button>
+                  <button type="button" class="btn btn-danger">Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Mabadi'ul Hasan</td>
+                <td>hasan@umm.ac.id</td>
+                <td>Teknik Informatika</td>
+                <td>
+                  <button type="button" class="btn btn-info">Edit</button>
+                  <button type="button" class="btn btn-success">Detail</button>
+                  <button type="button" class="btn btn-danger">Hapus</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-md-4 sidebar" id="site-sidebar">
+        <aside class="widgets">
+          <h3 class="widget-title">Menu</h3>
+          <ul>
+            <li><a href="#">Olahraga</a></li>
+            <li><a href="#">Politik</a></li>
+            <li><a href="#">Hiburan</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Sepakbola</a></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="row">
+      <div class="col-md-12 footer" id="site-footer">
+        <footer class="copyright text-center">
+          <p>&copy; 2015 onphpid.com</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Form Tambah Data -->
+  <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form class="form-horizontal">
+          <div class="modal-header">
+            <h4 class="modal-title" id="formModalLabel">Form Pendaftaran Mahasiswa</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <div class="modal-body">
+            <!-- Nama Depan -->
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Nama Depan</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <!-- Nama Belakang -->
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Nama Belakang</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Email</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control">
+              </div>
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Password</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control">
+              </div>
+            </div>
+            <!-- Tanggal Lahir -->
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Tanggal Lahir</label>
+              <div class="col-sm-9">
+                <input type="date" class="form-control">
+              </div>
+            </div>
+            <!-- Alamat -->
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Alamat</label>
+              <div class="col-sm-9">
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+            <!-- Jenis Kelamin -->
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Jenis Kelamin</label>
+              <div class="col-sm-9">
+                <label class="radio-inline"><input type="radio" name="gender"> Laki-laki</label>
+                <label class="radio-inline"><input type="radio" name="gender"> Perempuan</label>
+              </div>
+            </div>
+            <!-- Jurusan -->
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Jurusan</label>
+              <div class="col-sm-9">
+                <select class="form-control">
+                  <option>Teknik Informatika</option>
+                  <option>Teknik Elektro</option>
+                  <option>Teknik Sipil</option>
+                  <option>Teknik Industri</option>
+                  <option>Teknik Mesin</option>
+                </select>
+              </div>
+            </div>
+            <!-- Hobi -->
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Hobi</label>
+              <div class="col-sm-9">
+                <label class="checkbox-inline"><input type="checkbox"> Membaca</label>
+                <label class="checkbox-inline"><input type="checkbox"> Olahraga</label>
+                <label class="checkbox-inline"><input type="checkbox"> Kuliner</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (jQuery wajib ditambahkan lebih dulu) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
